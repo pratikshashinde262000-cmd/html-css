@@ -1,0 +1,19 @@
+<!Doctypehtml>
+<html>
+    <head>
+    <title>Personal profile page</title>
+    </head>
+    <body>
+    <h1>Pratiksha shinde</h1>
+    <hr>
+    <img src="https:/placeholder.com"alt="profile Photo">
+    <h2>Introduction</h2>
+    <p>Hello,MY name is pratiksha shinde. I am learning full stack developmant course</p>
+    <h2>Hobbies</h2>
+    <p>1,Playing Badminton 2,Listening Music.</p>
+    <h2>Contact Details</h2>
+    <p>Email ID- pratikshashinde262000@gmail.com
+       Phone No- 8378884657 
+    </p>
+    </body>
+</html>

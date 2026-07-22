@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Introduction page</title>
+</head>
+<body>
+    <h1>John Doe</h1>
+    <hr>
+    <p>I am learning full stack developmant.</p>
+    <p>I want to become a MERN stack Develoer.</p>
+    <br?
+    <br>
+    <p> Thank you </p>
+</body>
+</html>
