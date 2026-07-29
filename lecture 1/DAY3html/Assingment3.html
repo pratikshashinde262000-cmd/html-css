@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+
+        <!-- Full Name -->
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <!-- Mobile Number -->
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile" required>
+        <br><br>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+        <br><br>
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+        <br><br>
+
+        <!-- City -->
+        <label for="city">City:</label>
+        <select id="city" name="city">
+            <option value="">Select City</option>
+            <option value="Solapur">solapur</option>
+            <option value="pune">Pune</option>
+            <option value="Baramati">Baramati</option>
+            <option value="Mumbai">mumbai</option>
+            <option value="Kolhapur">Kolhapur</option>
+        </select>
+        <br><br>
+
+        <!-- Skills -->
+        <label>Skills:</label>
+        <input type="checkbox" name="skills" value="html"> HTML
+        <input type="checkbox" name="skills" value="css"> CSS
+        <input type="checkbox" name="skills" value="javascript"> JavaScript
+        <input type="checkbox" name="skills" value="Full stack Development"> Full stack Development
+        <br><br>
+
+        <!-- Profile Picture Upload -->
+        <label for="profile">Profile Picture:</label>
+        <input type="file" id="profile" name="profile" accept="image/*">
+        <br><br>
+
+        <!-- Buttons -->
+        <input type="submit" value="Submit"><br>
+        <input type="reset" value="Reset"><br>
+        <button type="reset">Reset all data</button>
+
+    </form>
+
+
+</body>
+
+</html>

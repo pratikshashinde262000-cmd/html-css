@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title> Lectuer 2</title>
+    </head>
+    <body>
+        <H2> order list</H2>
+        <ol>
+            <li>Pratiksha</li>
+            <li>vaibhav</li>
+            <li>aditya</li>
+            <li>karuna</li>
+        </ol>
+            <h2>unorder list</h2>
+            <ul>
+            <li>Pratiksha</li>
+            <li>vaibhav</li>
+            <li>aditya</li>
+            </ul>
+            <h2>Description list</h2>
+            <dl>
+                <dt>html</dt>
+                <dd>htaml is use to structure webpage.</dd>
+                <dt>Css</dt>
+                <dd>Css is use to style webpage</dd>
+                <dt>javascript</dt>
+                <dd> js is use to add functionalitiest to webpage</dd>
+            </dl>
+            <a target="_blank"href="https://google.com">go to google</a>
+            
+            <img
+            height="300"
+            width="500"
+            alt="ganpati image"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpSYEWa-b4WGo7YqQtmglLYFa7IqgUXsHVll6ApWOJQg&s=10"</>
+            <img width="500" height="300" src="../image/ganpati.webp" alt="ganpati"
+             
+         <audio controls>
+                <source src="../Maa.mp3" />
+        
+            </audio>
+            <video controls>
+                <source src="../VID-20150918-WA0006.mp4" />
+            </video>
+            <iframe height="300" width="500" src="https://flipkart.com"></iframe>
+            "
+        </body>
+</html>
