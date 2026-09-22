@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #cnt {
+        border: 2px solid red;
+        display: flex;
+        height: 1000px;
+        margin-top: 200px;
+      }
+      .items {
+        height: 300px;
+        width: 300px;
+        border: 10px solid blue;
+        background-color: rgb(116, 116, 248);
+        margin-right: 20px;
+      }
+      .yellowItem {
+        border: 10px solid yellow;
+        background-color: rgb(248, 248, 135);
+        position: relative;
+        position: absolute;
+        top: 80px;
+        left: 80px;
+        /* position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        position: sticky;
+        top: 0;
+        width: 300px; */
+      }
+      .z-1 {
+        z-index: 1;
+      }
+      .z-2 {
+        z-index: 2;
+      }
+      .z-3 {
+        z-index: 3;
+      }
+      #textCnt {
+        height: 300px;
+        width: 300px;
+        border: 2px solid red;
+        overflow: hidden;
+        overflow: scroll;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <section id="cnt">
+      <section class="items z-3">1</section>
+      <section class="items yellowItem z-2">2</section>
+      <section class="items z-3">3</section>
+    </section> -->
+    <section id="textCnt">
+      Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow. Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow.Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow.Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow.Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow. Hello testing overflow. Hello testing overflow.
+      Hello testing overflow.
+    </section>
+  </body>
+</html>

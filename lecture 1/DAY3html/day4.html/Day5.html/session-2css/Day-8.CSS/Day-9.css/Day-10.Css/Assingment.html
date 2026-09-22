@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Responsive personal portfolio website of pratiksha shinde, a Full Stack Developer">
+
+    <title> Pratiksha shinde| Portfolio</title>
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background-color: #f5f5f5;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        header {
+            background-color: #111827;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            min-height: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color:white
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+            padding: 60px 0;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h1 span {
+            color: #0284c7;
+        }
+
+        .hero-text h2 {
+            font-size: 22px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #0284c7;
+            color: white;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0369a1;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-box {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background-color: #0284c7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 70px;
+            font-weight: bold;
+            border: 8px solid white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+
+        .about-box {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+            flex: 1;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+
+        .project-card {
+            overflow: hidden;
+        }
+
+        .project-image {
+            height: 160px;
+            background-color: #bae6fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+    
+
+        .education-box {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #0284c7;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+
+        .education-box h3 {
+            margin-bottom: 5px;
+        }
+
+        .education-box p {
+            color: #666;
+        }
+
+
+        .contact-form {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+
+        footer {
+            background-color: #111827;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 15px 0;
+        }
+
+        .social-links a {
+            color: #38bdf8;
+        }
+
+        .social-links a:hover {
+            color: white;
+        }
+
+
+      
+
+        @media (min-width: 600px) {
+
+            .navbar {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .hero-text h1 {
+                font-size: 48px;
+            }
+
+            .cards {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .card {
+                flex: 1 1 calc(50% - 20px);
+            }
+
+            .about-content {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+
+
+        @media (min-width: 900px) {
+
+            .hero {
+                min-height: 90vh;
+            }
+
+            .hero-content {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .hero-text h1 {
+                font-size: 56px;
+            }
+
+            .hero-text h2 {
+                font-size: 28px;
+            }
+
+            .hero-image {
+                justify-content: center;
+            }
+
+            .profile-box {
+                width: 300px;
+                height: 300px;
+                font-size: 100px;
+            }
+
+            .cards {
+                flex-wrap: nowrap;
+            }
+
+            .card {
+                flex: 1;
+            }
+
+            .project-card {
+                flex: 1 1 30%;
+            }
+
+            .contact-form {
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container navbar">
+
+            <div class="logo">
+                <span> Pratiksha  Shinde</span>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+  
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <h1>
+                        Hello, I am
+                        <span> pratiksha shinde</span>
+                    </h1>
+
+                    <h2>Full Stack Developer</h2>
+
+                    <p>
+                        I create modern, responsive and user-friendly
+                        websites using HTML, CSS and JavaScript.
+                    </p>
+
+                    <a href="#contact" class="btn">
+                        Contact Me
+                    </a>
+
+                </div>
+
+                <div class="hero-image">
+                    <div class="profile-box">
+                        PS
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        
+
+        <section id="about">
+
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>About Me</h2>
+                    <p>Get to know me</p>
+                </div>
+
+                <div class="about-content">
+
+                    <div class="about-box">
+                        <h3>Who I Am</h3>
+
+                        <p>
+                            I am a passionate Full Stack Developer
+                            interested in creating beautiful and
+                            responsive websites.
+                        </p>
+                    </div>
+
+                    <div class="about-box">
+                        <h3>My Goal</h3>
+
+                        <p>
+                            My goal is to build high-quality websites
+                            that work perfectly on mobile, tablet
+                            and desktop devices.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+      
+
+        <section id="skills">
+
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>My Skills</h2>
+                    <p>Technologies I work with</p>
+                </div>
+
+                <div class="cards">
+
+                    <div class="card">
+                       
+                        <h3>HTML</h3>
+                        <p>
+                            Used to create the structure of web pages.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        
+                        <h3>CSS</h3>
+                        <p>
+                            Responsive layouts using CSS and Flexbox.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon"></div>
+                        <h3>JavaScript</h3>    
+                        <p>
+                            Used to make web pages interactive.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    
+
+        <section id="projects">
+
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>My Projects</h2>
+                    <p>Some of my recent work</p>
+                </div>
+
+                <div class="cards">
+
+                    <article class="card project-card">
+
+                        <div class="project-image">
+                           <img src="data:image/png;base64,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" alt=""> 
+                        </div>
+
+                        <div class="project-content">
+                            <h3>Portfolio Website</h3>
+
+                            <p>
+                                A responsive personal portfolio
+                                created using HTML and CSS.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="card project-card">
+
+                        <div class="project-image">
+                            <img src="data:image/png;base64,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" alt="">
+                        </div>
+
+                        <div class="project-content">
+                            <h3>Product Website</h3>
+
+                            <p>
+                                A responsive product listing page
+                                with modern card layouts.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="card project-card">
+
+                        <div class="project-image">
+                           <img src="data:image/png;base64,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" alt=""> 
+                        </div>
+
+                        <div class="project-content">
+                            <h3>Blog Website</h3>
+
+                            <p>
+                                A semantic HTML blog layout with
+                                responsive design.
+                            </p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="education">
+
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Education</h2>
+                    <p>My educational background</p>
+                </div>
+
+                <div class="education-box">
+
+                    <h3>Bachelor of Busimess Administration</h3>
+
+                    <p>
+                        Bharati vidyapeeth University Pune | 2018 - 2021
+                    </p>
+
+                </div>
+
+                <div class="education-box">
+
+                    <h3>Master of Busimess Administration </h3>
+
+                    <p>
+                        welingkar mumbai | 2025
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="contact">
+
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Contact Me</h2>
+                    <p>Let's work together</p>
+                </div>
+
+                <form class="contact-form">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Enter your message"
+                            required></textarea>
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn submit-btn">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="container">
+
+            <h3>pratiksha shinde</h3>
+
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Whatsapp</a>
+                <a href="#">Email</a>
+            </div>
+
+            <p>
+                2026 Pratiksha shinde. 
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
